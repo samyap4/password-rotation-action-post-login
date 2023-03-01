@@ -1,5 +1,18 @@
 {
   "secrets": [],
-  "configuration": [],
+  "configuration": [
+    {
+      "name": "PASSWORD_EXPIRY_IN_DAYS",
+      "label": "Password Expiry In Days",
+      "description": "The number of days a password is valid before it is considered expired and must be reset.",
+      "default_value": "90"
+    },
+    {
+      "name": "ERROR_MESSAGE",
+      "label": "Error Message",
+      "description": "The error message returned to the user when they attempt to use an expired password.",
+      "default_value": "Your password has expired.  Please reset it."
+    }
+  ],
   "dependencies": []
 }
