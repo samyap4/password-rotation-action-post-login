@@ -8,9 +8,21 @@
       "default_value": "90"
     },
     {
+      "name": "ENABLED_CONNECTIONS",
+      "label": "Enabled Connections",
+      "description": "If you wish to restrict this behavior to certain Database connections, please provide a comma-delimited list (no spaces) of the connection IDs you wish to enforce this policy on.  You can also leave this empty to enforce on all Database connections.",
+      "default_value": ""
+    },
+    {
+      "name": "ENABLED_ORGANIZATIONS",
+      "label": "Enabled Organizations",
+      "description": "If you wish to restrict this behavior to certain Organizations, provide a comma-delimited list (no spaces) of the organization IDs you wish to enforce this policy on. You can also leave this empty to enforce on all Organizations.",
+      "default_value": "90"
+    },
+    {
       "name": "ERROR_MESSAGE",
       "label": "Error Message",
-      "description": "The error message returned to the user when they attempt to use an expired password.",
+      "description": "The error code/message returned to the client when they attempt to use an expired password.",
       "default_value": "Your password has expired.  Please reset it."
     }
   ],

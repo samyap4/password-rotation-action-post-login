@@ -16,6 +16,8 @@ This integration allows you to implement a password rotation policy for your use
 
 * **Password Expiry In Days:** Set this to the number of days a password is valid before expiry.
 * **Error Message:** Set this to what you want to display to the user when they attempt to use an expired password.
+* **Enabled Connections:** Set this to a comma-delimited list (no spaces) of the connection IDs you wish to enforce this policy on. Alternatively, leave it blank if you wish to enforce this policy on all connections.
+* **Enabled Organizations:** Set this to a comma-delimited list (no spaces) of the organization IDs you wish to enforce this policy on. Alternatively, leave it blank if you wish to enforce this policy on all organizations.
 
 1. Add the integration to your Library by selecting **Create**.
 
@@ -31,4 +33,4 @@ Once this Action has been deployed. Users with passwords that were set within th
 
 ## Troubleshooting
 
-Ensure you provide a valid whole number for `Password Expiry In Days` and remember this will only apply to users that authenticate with Database connections.
+Ensure you provide a valid whole number for `Password Expiry In Days` and remember this will only apply to users that authenticate with Database connections. Also make sure to provide the `name` of the connections and organizations and not any `Display Names` or `IDs`. Make sure the list comma-delimited without spaces: `team-a,team-b,team-c`. Remember that the evaluation for `Connections` and `Organizations` is either or and not mutually exclusive. So if an organization is supposed to have this policy enforced, but their is a connection they are able to authenticate against that is not included - the user will not be required to reset their password. If you supply `Connections` and `Organizations` - only a user that authenticates under both an enabled `Organization` and `Connection` will have the policy enforced for them. And this will only be enforced for `Database Connections`. Users than authenticate through `Social, Enterprise or Passwordless Connections` will not be under the scope of this `Action`.
