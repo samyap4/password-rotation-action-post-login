@@ -18,8 +18,6 @@ This integration allows you to implement a password rotation policy for your use
 
 * **Error Message:** Set this to what you wish to return to the calling application.  This will be returned in the query string as `error_description`.
 
-Note: These two configurations work in tandem. If you set values for both, only logins where both criteria are true will this policy be enforced. So for instance, if you login with a connection that is not enabled but an organization that is: the user will not be required to reset password and vice versa. Make sure to consider this when implementing this strategy.
-
 1. Add the integration to your Library by selecting **Create**.
 
 1. In the modal that appears, select the **Add to flow** link.
